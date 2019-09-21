@@ -13,7 +13,7 @@ public class ArrayListLamda {
 		List<String> list1 =lst.stream()
 						   .map(e -> e.getName().toUpperCase())
 						   .collect(Collectors.toList());
-		
+
 		
 		List<Employee> list2 =lst.stream()
 				   .map( (Employee e) -> {int id = e.getId();
@@ -24,6 +24,8 @@ public class ArrayListLamda {
 		
 		Map<Integer,String> map = lst.stream().collect(Collectors.toMap( Employee::getId, Employee::getName));
 		map.entrySet().stream().forEach(System.out::println);
+
+
 		
 	}
 
@@ -31,6 +33,7 @@ public class ArrayListLamda {
 class Employee{
 	
 	private int id;
+	private int department;
 	private String name;
 	
 	public Employee(int id, String name) {
@@ -53,6 +56,14 @@ class Employee{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(int department) {
+		this.department = department;
 	}
 
 	@Override

@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 public class StringJoinerExample {
 
 	public static void main(String[] args) {
-		StringJoiner sj = new StringJoiner("/", "file:", ".txt");
+		StringJoiner sj = new StringJoiner("_", "fileName_", ".txt");
 		sj.add("2006");
 		sj.add("11");
 		sj.add("05");
