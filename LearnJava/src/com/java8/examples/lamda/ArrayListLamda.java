@@ -25,7 +25,8 @@ public class ArrayListLamda {
 		Map<Integer,String> map = lst.stream().collect(Collectors.toMap( Employee::getId, Employee::getName));
 		map.entrySet().stream().forEach(System.out::println);
 
-
+		final var map2 = list2.stream().collect(Collectors.toMap(k -> k.getName(), k -> k.getDepartment()));
+		map2.entrySet().stream().forEach(System.out::println);
 		
 	}
 

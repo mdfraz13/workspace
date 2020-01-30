@@ -11,6 +11,10 @@ public class ArrayListLamda2 {
 
 	public static void main(String[] args) {
 		List<String> list = Arrays.asList("Core Java","Spring","Spring JPA","Java Collection");
+
+		Stream<String> st = Stream.of("Core Java","Spring","Spring JPA","Java Collection");
+		st.forEach(System.out :: println);
+
 		//list.stream().flatMap(s -> {s.});
 		Stream<String> stream = list.stream().flatMap(s -> {
 									String[] str = s.split(" "); 

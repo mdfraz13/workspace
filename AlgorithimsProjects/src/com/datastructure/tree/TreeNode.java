@@ -1,7 +1,7 @@
 package com.datastructure.tree;
 
 public class TreeNode {
-	
+
 	private int data;
 	private TreeNode left;
 	private TreeNode right;
@@ -36,10 +36,11 @@ public class TreeNode {
 
 	@Override
 	public String toString() {
-		return "" + data + "\n"
-			+ "/            \\ \n"
-			+ " " + left +  "    " + right
-			+" ] ";
+		return "TreeNode{" +
+			   "data=" + data +
+			   ", left=" + left +
+			   ", right=" + right +
+			   '}';
 	}
 
 }
