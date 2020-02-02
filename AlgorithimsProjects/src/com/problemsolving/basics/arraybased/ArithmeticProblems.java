@@ -1,4 +1,4 @@
-package com.problemsolving.basics;
+package com.problemsolving.basics.arraybased;
 
 public class ArithmeticProblems {
 
