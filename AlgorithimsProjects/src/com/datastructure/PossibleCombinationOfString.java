@@ -1,4 +1,4 @@
-package com.problemsolving.basics;
+package com.datastructure;
 
 public class PossibleCombinationOfString {
 

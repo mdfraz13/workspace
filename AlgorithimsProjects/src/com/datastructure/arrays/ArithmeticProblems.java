@@ -1,4 +1,4 @@
-package com.problemsolving.basics.arraybased;
+package com.datastructure.arrays;
 
 public class ArithmeticProblems {
 

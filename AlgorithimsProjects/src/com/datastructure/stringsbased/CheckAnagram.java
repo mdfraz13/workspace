@@ -1,4 +1,4 @@
-package com.problemsolving.basics.stringsbased;
+package com.datastructure.stringsbased;
 
 import java.util.HashMap;
 import java.util.Map;

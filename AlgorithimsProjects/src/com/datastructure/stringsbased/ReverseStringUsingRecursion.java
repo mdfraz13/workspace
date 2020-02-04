@@ -1,4 +1,4 @@
-package com.problemsolving.basics.stringsbased;
+package com.datastructure.stringsbased;
 
 public class ReverseStringUsingRecursion {
 	

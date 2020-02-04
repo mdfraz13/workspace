@@ -1,6 +1,5 @@
-package com.problemsolving.basics.stringsbased;
+package com.datastructure.stringsbased;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

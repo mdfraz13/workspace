@@ -1,4 +1,4 @@
-package com.problemsolving.basics;
+package com.datastructure;
 
 /**
  * Write a program in Java which Counts total number of Characters, Words and Lines

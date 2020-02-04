@@ -10,6 +10,18 @@ public class TreeNode {
 		// TODO Auto-generated constructor stub
 	}
 
+	public TreeNode(int data){
+		this.data = data;
+		this.left = null;
+		this.right = null;
+	}
+
+	public TreeNode(int data, TreeNode left, TreeNode right){
+		this.data = data;
+		this.left = left;
+		this.right = right;
+	}
+
 	public int getData() {
 		return data;
 	}
