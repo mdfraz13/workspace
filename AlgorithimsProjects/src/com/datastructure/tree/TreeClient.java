@@ -7,7 +7,7 @@ public class TreeClient {
 	 * 			/		 \ 
 	 * 		80				90
 	 *		/\ 			/		\
-	 * 	70		60		95		75
+	 * 	60		70		95		75
 	 * 	/\
 	 * null		
 	 * 
@@ -45,18 +45,26 @@ public class TreeClient {
 		
 //		int height = LevelOrderTransversal.heightOfTree(root);
 //		System.out.println(height);
-//		
-//		LevelOrderTransversal.levelOrderTransversal(root);
-		
+//
+		// Level order transversal
+		//LevelOrderTransversal.levelOrderTransversal(root);
 		//LevelOrderTransversal.levelOrderTransversalUsingQueue(root);
-		
+
+		// DFS and BFS
 		//DepthFirstTreeTransversal.depthFirstTreeTransversal(root);
+		//BreadthFirstTreeTransversal.breadthFirstTreeTransversal(root);
+		//System.out.println(root);
+
+		// Binary Tree is Binary Search Tree
+		// if(IsBinaryTreeAlgorithm.isBinarySearchTree(root)) {
+		// 	System.out.println("Yes, I am BinaryTree");
+		// }else {
+		// 	System.out.println("Sorry, I am not BinaryTree");
+		// }
+
 		System.out.println(root);
-		if(IsBinaryTreeAlgorithm.isBinarySearchTree(root)) {
-			System.out.println("Yes, I am BinaryTree");
-		}else {
-			System.out.println("Sorry, I am not BinaryTree");
-		}
+		TreeNode newRoot = MirrorOfBinaryTree.mirrorOfTree(root);
+		System.out.println(newRoot);
 	}
 
 }
