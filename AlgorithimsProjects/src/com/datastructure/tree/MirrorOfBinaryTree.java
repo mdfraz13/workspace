@@ -7,15 +7,36 @@ public class MirrorOfBinaryTree {
 		if(node == null)
 			return node;
 
-		mirrorOfTree(node.getLeft());
-		mirrorOfTree(node.getRight());
+		mirrorOfTree(copyTreeNode2(node.getLeft()));
+		mirrorOfTree(copyTreeNode2(node.getRight()));
+		copyTreeNode2(node);
 
-		//node.setData(root.getData());
+		return node;
+	}
+
+	public static TreeNode copyTreeNode(TreeNode node){
+		if(node == null){
+			return null;
+		}
+
 		TreeNode tempNode = new TreeNode();
-		tempNode = node.getRight();
+		tempNode.setRight(node.getLeft());
+		tempNode.setLeft(node.getRight());
+		tempNode.setData(node.getData());
+
+		return tempNode;
+	}
+
+	public static TreeNode copyTreeNode2(TreeNode node){
+		if(node == null){
+			return null;
+		}
+
+		TreeNode tempNode = node.getRight();
 		node.setRight(node.getLeft());
 		node.setLeft(tempNode);
 
 		return node;
 	}
+
 }
