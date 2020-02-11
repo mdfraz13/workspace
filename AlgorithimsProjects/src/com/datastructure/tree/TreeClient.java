@@ -1,5 +1,7 @@
 package com.datastructure.tree;
 
+import java.util.List;
+
 public class TreeClient {
 
 	/**
@@ -63,8 +65,15 @@ public class TreeClient {
 		// }
 
 		System.out.println(root);
-		TreeNode newRoot = MirrorOfBinaryTree.mirrorOfTree(root);
-		System.out.println(newRoot);
+		//TreeNode newRoot = MirrorOfBinaryTree.mirrorOfTree(root);
+		//System.out.println(newRoot);
+		//List<String> lst = PrintAllPathOfBinaryTree.printAllPathOfTree(root);
+		//System.out.println(lst.toString());
+
+		boolean isSumAvailable = FindNSumInATree.isNSumAvailable(root, 210);
+		System.out.println(isSumAvailable);
+
+		VerticalOrderTransversal.verticalOrderTransversal(root);
 	}
 
 }
