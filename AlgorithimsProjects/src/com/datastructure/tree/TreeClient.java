@@ -70,10 +70,13 @@ public class TreeClient {
 		//List<String> lst = PrintAllPathOfBinaryTree.printAllPathOfTree(root);
 		//System.out.println(lst.toString());
 
-		boolean isSumAvailable = FindNSumInATree.isNSumAvailable(root, 210);
-		System.out.println(isSumAvailable);
+		//boolean isSumAvailable = FindNSumInATree.isNSumAvailable(root, 210);
+		//System.out.println(isSumAvailable);
 
-		VerticalOrderTransversal.verticalOrderTransversal(root);
+		//VerticalOrderTransversal.verticalOrderTransversal(root);
+
+		TreeNode node = LeastCommonAncestorBST.leastCommonAncestor(root,60, 70 );
+		System.out.println(node.toString());
 	}
 
 }
