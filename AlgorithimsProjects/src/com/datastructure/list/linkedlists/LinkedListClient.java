@@ -20,7 +20,10 @@ public class LinkedListClient {
 //		linkedList.remove();
 //		System.out.println(linkedList);
 		
-		linkedList.reverse();
+		//linkedList.reverse();
+		//System.out.println(linkedList);
+
+		linkedList.resverseRecursive();
 		System.out.println(linkedList);
 	}
 

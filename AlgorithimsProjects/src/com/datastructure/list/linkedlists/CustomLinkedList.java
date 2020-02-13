@@ -48,4 +48,9 @@ public class CustomLinkedList {
 		ReverseALinkedList.reverse(head);
 	}
 
+	public void resverseRecursive(){
+		LinkNode newHead = ReverseALinkedList.reverseRecursion(head);
+		head = newHead;
+	}
+
 }

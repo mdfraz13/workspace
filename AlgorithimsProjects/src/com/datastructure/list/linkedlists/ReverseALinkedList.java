@@ -16,4 +16,17 @@ public class ReverseALinkedList {
 		return head;
 	}
 
+	public static LinkNode reverseRecursion(LinkNode head){
+		if(head == null || head.getNext() == null){
+			return head;
+		}
+
+		LinkNode newHead = reverseRecursion(head.getNext());
+
+		head.getNext().setNext(head);
+		head.setNext(null);
+
+		return newHead;
+	}
+
 }
