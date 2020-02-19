@@ -2,18 +2,21 @@ package com.java8.problems.concurrency;
 
 public class CyclicBarrierImpl {
 
-	private int numberOfpermits = 0;
+	private int partiesAwait = -1;
+	private int initialParties = -1;
 
-	public CyclicBarrierImpl(int permits){
-		this.numberOfpermits = permits;
+	public CyclicBarrierImpl(int parties){
+		this.partiesAwait = parties;
+		this.initialParties = parties;
 	}
 
-	public synchronized void await(){
-		numberOfpermits--;
-		if(numberOfpermits == 0){
-
+	public synchronized void await() throws InterruptedException{
+		partiesAwait--;
+		if(partiesAwait > 0){
+			wait();
 		}else{
-
+			this.partiesAwait = initialParties;
+			notifyAll();;
 		}
 	}
 
