@@ -3,9 +3,11 @@ package com.datastructure.arrays;
 public class FindMaxAnd2ndMaxNumber {
 
 	public static void main(String[] args) {
-		int[] input = {3, 8, 5, 2, 6, 9, 1, 4};
+		//int[] input = {3, 8, 5, 2, 6, 9, 1, 4};
+		int[] input = {9, 8, 5, 2, 6, 1, 4};
 		//System.out.println("0000");
 		getMaxAnd2ndMax2(input);
+		//getMaxAnd2ndMax(input);
 	}
 
 
@@ -37,6 +39,10 @@ public class FindMaxAnd2ndMaxNumber {
 			if(firstMaxNumber < input[i]){
 				secondMaxNumber = firstMaxNumber;
 				firstMaxNumber = input[i];
+			}
+
+			else if(secondMaxNumber < input[i]){
+				secondMaxNumber = input[i];
 			}
 		}
 		System.out.println(firstMaxNumber+" == "+secondMaxNumber);

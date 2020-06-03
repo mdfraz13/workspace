@@ -6,7 +6,7 @@ public class FindAPairWithGivenDifference {
 
 	public static void main(String[] args) {
 		int[] a = {5, 20, 3, 2, 50, 80};
-		int k = 78;
+		int k = 30;
 
 		int[] res = findPairWithGivenDifference(a, k);
 		System.out.println(Arrays.toString(res));

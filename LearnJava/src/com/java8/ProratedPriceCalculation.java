@@ -11,12 +11,12 @@ public class ProratedPriceCalculation {
 		LocalDateTime now = LocalDateTime.now();
 		LocalDateTime mo = LocalDateTime.now().plusHours(719).plusMinutes(59);
 		//LocalDateTime week = LocalDateTime.now().plusDays(7);
-		double price = calculateProratedPrice(now, mo);
+		//double price = calculateProratedPrice(now, mo);
 
 		System.out.println("******************************");
 
 		//calculateProratedPrice2(now, mo);
-		calculateProratedPrice();
+		//calculateProratedPrice();
 
 		double total = 0.00;
 		if(total > 0){
@@ -24,6 +24,10 @@ public class ProratedPriceCalculation {
 		}else{
 			System.out.println("total is equal");
 		}
+
+		String price =  "2.5";
+		String chargePriceStr = new BigDecimal(price).setScale(2, RoundingMode.DOWN).multiply(new BigDecimal("1000")).toBigIntegerExact().toString();
+		System.out.println(chargePriceStr);
 	}
 
 	public static double calculateProratedPrice(final LocalDateTime from,
