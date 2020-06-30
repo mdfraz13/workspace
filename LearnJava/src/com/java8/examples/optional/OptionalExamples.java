@@ -2,6 +2,7 @@ package com.java8.examples.optional;
 
 import java.util.Optional;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class OptionalExamples {
 
@@ -27,6 +28,13 @@ public class OptionalExamples {
 		
 		System.out.println(user);
 		System.out.println(str);
+
+		Stream<Employee> x = Stream.of(new Employee("10", "20"));
+		Optional<Employee> eee = x.filter(e -> e.getId().equals("21")).findAny();
+		System.out.println(eee.isPresent());
+
+		String va = eee.isPresent() ? eee.get().getId() : "0";
+		System.out.println(va);
 	}
 
 }
@@ -34,6 +42,8 @@ class User{
 	
 	private String id;
 	private String address;
+
+
 	
 	public Optional<String> getId() {
 		return Optional.of(id);
@@ -51,7 +61,32 @@ class User{
 	public String toString() {
 		return "User [id=" + id + ", address=" + address + "]";
 	}
-	
-	
-	
+
+}
+
+class Employee{
+
+	private String id;
+	private String name;
+
+	public Employee(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
