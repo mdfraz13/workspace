@@ -7,7 +7,7 @@ public class TTLCache {
 
 	private final ConcurrentHashMap<String, TTLCacheObject> keyValueMap = new ConcurrentHashMap<>();
 
-	public TTLCache(){
+	public TTLCache() {
 		Runnable r = () -> {
 			while (true) {
 				try {
