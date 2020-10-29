@@ -42,10 +42,34 @@ public class PredicateExample {
 			.and(isNumberLessThanRange);
 
 		IntStream.rangeClosed(150, 501).filter(e -> combined3.test(e)).forEach(System.out::println);
+
+		System.out.println("********************* is Palindrome ********************");
+
+		Predicate<Integer> isPalindrome = e -> isPalindrome(e);
+		IntStream.rangeClosed(150, 501).filter(e -> isPalindrome.test(e)).forEach(System.out::println);
 	}
 
 	private static boolean isPrimeNumber(int number) {
 		return !IntStream.range(2, number).anyMatch(i -> number % i == 0);
+	}
+
+	private static boolean isPalindrome(int number) {
+
+		char[] charArray = String.valueOf(number).toCharArray();
+		int firstIndex = 0;
+		int lastIndex = charArray.length-1;
+
+		while (firstIndex < lastIndex) {
+			if (charArray[firstIndex] == charArray[lastIndex]) {
+				firstIndex++;
+				lastIndex--;
+			}
+			else {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 }
