@@ -1,4 +1,4 @@
-package com.java8.patterns.builder;
+package com.java8.patterns.creational.builder;
 
 public class Car {
 

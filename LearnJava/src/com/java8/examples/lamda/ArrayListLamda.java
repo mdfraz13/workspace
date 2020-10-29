@@ -43,6 +43,12 @@ class Employee{
 		this.name = name;
 	}
 
+	public Employee(int id, int department, String name) {
+		this.id = id;
+		this.department = department;
+		this.name = name;
+	}
+
 	public int getId() {
 		return id;
 	}

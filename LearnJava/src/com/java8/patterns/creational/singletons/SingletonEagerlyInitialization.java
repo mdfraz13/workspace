@@ -1,4 +1,4 @@
-package com.java8.patterns.singletons;
+package com.java8.patterns.creational.singletons;
 
 public class SingletonEagerlyInitialization {
 

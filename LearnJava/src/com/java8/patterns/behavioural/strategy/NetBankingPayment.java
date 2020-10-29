@@ -1,4 +1,4 @@
-package com.java8.patterns.strategy;
+package com.java8.patterns.behavioural.strategy;
 
 public class NetBankingPayment implements PaymentStrategy {
 

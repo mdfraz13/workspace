@@ -10,6 +10,9 @@ public class CovertIntsToList {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a = new int[] {5,6,7,2,3,5,6,7,9};
+
+		IntStream intStream = IntStream.of(a);
+		intStream.filter(e -> e % 2 == 0).forEach(System.out::println);
 		
 		//Arrays.stream(a).boxed().collect(Collectors.toList()).forEach(System.out::println);
 		

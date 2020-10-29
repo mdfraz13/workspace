@@ -1,4 +1,4 @@
-package com.java8.patterns.decorator;
+package com.java8.patterns.structural.decorator;
 
 public class SportsCar extends CarDecorator {
 

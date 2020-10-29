@@ -1,4 +1,4 @@
-package com.java8.patterns.factory;
+package com.java8.patterns.creational.factory;
 
 public class LuxuryCar implements Car {
 
