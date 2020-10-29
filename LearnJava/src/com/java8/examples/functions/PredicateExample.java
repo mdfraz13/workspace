@@ -6,6 +6,8 @@ import java.util.stream.IntStream;
 
 public class PredicateExample {
 
+	public Predicate<Integer> combined3 = x -> x > 10;
+
 	public static void main(String[] args) {
 
 		Predicate<Integer> predicate = x -> x > 10;

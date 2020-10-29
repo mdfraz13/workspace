@@ -59,6 +59,7 @@ public class WorkCounterLamda {
 				 .sorted(Comparator.comparing(Entry::getValue, Comparator.reverseOrder()))
 				 .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (o1, o2) -> o1, LinkedHashMap::new));
 
+
 		e.entrySet().forEach(System.out::println);
 		System.out.println("*****************************");
 
@@ -77,6 +78,7 @@ public class WorkCounterLamda {
 			//.collect(Collectors.toList());
 
 		list.stream().forEach(System.out::println);
+
 
 		return e;
 	}
