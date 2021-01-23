@@ -1,5 +1,7 @@
 package com.java8.examples.functions;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
@@ -48,7 +50,17 @@ public class PredicateExample {
 		System.out.println("********************* is Palindrome ********************");
 
 		Predicate<Integer> isPalindrome = e -> isPalindrome(e);
-		IntStream.rangeClosed(150, 501).filter(e -> isPalindrome.test(e)).forEach(System.out::println);
+		IntStream.rangeClosed(150, 501).filter(isPalindrome::test).forEach(System.out::println);
+
+		System.out.println(" #################### object list filter ####################");
+		Predicate<Employee> employeePredicate = e -> e.getName().equalsIgnoreCase("FRAZ");
+		Predicate<Employee> idPredicate = e -> e.getId().equalsIgnoreCase("10");
+
+		Predicate<Employee> combinedEmployee = employeePredicate.or(idPredicate);
+		List<Employee> employeeList = Arrays.asList(new Employee("FRaz", "20"), new Employee("Faraz", "10"), new Employee("XYX", "30"));
+		System.out.println(employeeList);
+		employeeList.stream().filter(combinedEmployee :: test).forEach(System.out::println);
+
 	}
 
 	private static boolean isPrimeNumber(int number) {
@@ -74,5 +86,31 @@ public class PredicateExample {
 		return true;
 	}
 
+}
+class Employee {
+
+	private String name;
+	private String id;
+
+	public Employee(String name, String id) {
+		this.name = name;
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee{" +
+			   "name='" + name + '\'' +
+			   ", id='" + id + '\'' +
+			   '}';
+	}
 }
 

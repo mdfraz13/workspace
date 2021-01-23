@@ -48,4 +48,36 @@ public class FindMaxAnd2ndMaxNumber {
 		System.out.println(firstMaxNumber+" == "+secondMaxNumber);
 
 	}
+
+	public static void getMaxAnd2ndMax2QA(int[] input){
+		int firstMaxNumber = input[0];
+		int secondMaxNumber = input[1];
+		for(int i=1; i< input.length + 1; i++) {
+			if(firstMaxNumber < input[i]){
+				secondMaxNumber = firstMaxNumber;
+				firstMaxNumber = input[i];
+			}
+
+			else if(secondMaxNumber <= input[i]){
+				secondMaxNumber = input[i];
+			}
+		}
+		System.out.println(firstMaxNumber+" == "+secondMaxNumber);
+	}
+
+	public static void data(int arr[], int arr_size) {
+		int i, num1, num2;
+		num1 = num2 = Integer.MIN_VALUE;
+		for (i = 0; i < arr_size; i++)
+		{
+			if (arr[i] > num1) {
+				num2 = num1;
+				num1 = arr[i];
+			}
+			else if (arr[i] > num2 && arr[i] != num1) {
+				num2 = arr[i];
+			}
+		}
+		System.out.println("num1 "+num1+" num2 "+num2);
+	}
 }

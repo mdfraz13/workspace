@@ -49,7 +49,7 @@ public class TreeClient {
 //		System.out.println(height);
 //
 		// Level order transversal
-		//LevelOrderTransversal.levelOrderTransversal(root);
+		LevelOrderTransversal.levelOrderTransversal(root);
 		//LevelOrderTransversal.levelOrderTransversalUsingQueue(root);
 
 		// DFS and BFS
@@ -75,8 +75,8 @@ public class TreeClient {
 
 		//VerticalOrderTransversal.verticalOrderTransversal(root);
 
-		TreeNode node = LeastCommonAncestorBST.leastCommonAncestor(root,60, 70 );
-		System.out.println(node.toString());
+		//TreeNode node = LeastCommonAncestorBST.leastCommonAncestor(root,60, 70 );
+		//System.out.println(node.toString());
 	}
 
 }

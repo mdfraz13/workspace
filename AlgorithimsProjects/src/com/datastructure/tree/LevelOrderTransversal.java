@@ -11,7 +11,7 @@ public class LevelOrderTransversal {
 	
 	public static void levelOrderTransversal(TreeNode node) {
 		int height = heightOfTree(node);
-		for(int i=0;i<=height;i++) {
+		for(int i=1;i<=height;i++) {
 			levelOrderTransversal(node,i);
 		}
 		

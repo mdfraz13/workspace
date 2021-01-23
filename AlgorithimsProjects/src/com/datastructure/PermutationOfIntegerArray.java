@@ -14,7 +14,7 @@ public class PermutationOfIntegerArray {
 		//swap(input,1,2);
 		//System.out.println(Arrays.toString(input));
 		permute(input, 0, input.length);
-		
+		System.out.println(Arrays.toString(input));
 	}
 	
 	private static void permute(int[] input,int i,int length) {
